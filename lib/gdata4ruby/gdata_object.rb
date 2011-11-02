@@ -175,7 +175,12 @@ module GData4Ruby
       @exists = false
       return true
     end
-    
+
+    #Returns true if has edit_uri
+    def editable?
+      !!@edit_uri
+    end
+
     #Creates a new string containing the XML representation of the object as a GData compliant <entry>
     #element.
     def to_xml
